@@ -1,0 +1,27 @@
+﻿<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid x:Name="grdMain">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="Task Samples" HorizontalAlignment="Center" FontSize="20"/>
+        </StackPanel>
+        <StackPanel Margin="5" Grid.Row="1">
+            <Label x:Name="lbMessage"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="2">
+            <Button x:Name="StarTask" Content="Inciar" Margin="5" Padding="5" Click="StarTask_Click"/>
+            <Button x:Name="CancelTask" Content="Cancelar" Margin="5" Padding="5" Click="CancelTask_Click"/>
+            <Button x:Name="ShowStatus" Content="Estado" Margin="5" Padding="5" Click="ShowStatus_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
